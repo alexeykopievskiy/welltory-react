@@ -26,8 +26,11 @@
     "webpack-dev-server": "^1.14.1"
   },
   "devDependencies": {
-    "stylus": "^0.54.5",
-    "stylus-loader": "^2.3.1"
+    "css-loader": "^0.25.0",
+    "node-sass": "^3.10.1",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2"
   },
   "scripts": {
     "dev": "./node_modules/.bin/webpack-dev-server --host 0.0.0.0 --port 9000 --content-base src --inline --hot",

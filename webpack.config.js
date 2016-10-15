@@ -18,10 +18,13 @@ module.exports = {
         }
       },
       {
-        test: /\.styl$/,
-        loader: 'css-loader!stylus-loader?paths=node_modules/bootstrap-stylus/stylus/'
+        test: /\.scss$/,
+        loaders: ["style", "css", "sass"]
       }
     ]
+  },
+  sassLoader: {
+    includePaths: [path.resolve(__dirname, "src/assets/scss/")]
   },
   output: {
     path: __dirname + "/src/",
