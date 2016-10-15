@@ -7,7 +7,7 @@ import Layout from './containers/Layout'
 
 const app = document.getElementById('app')
 
-ReactDom.render(
+ReactDOM.render(
 <Provider store={store} >
   <Layout />
 </Provider>, app)
