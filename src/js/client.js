@@ -1,1 +1,8 @@
-/*main component*/
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+import Layout from './containers/Layout'
+
+const app = document.getElementById('app')
+
+ReactDOM.render(<Layout />, app)
