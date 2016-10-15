@@ -7,5 +7,4 @@ import reducer from './reducers'
 
 const middleware = applyMiddleware(logger(), promise(), thunk)
 
-// add reducer
 export default createStore(reducer, middleware)
