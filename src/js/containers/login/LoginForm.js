@@ -1,27 +1,28 @@
 import React from 'react'
+import { Field, reduxForm } from 'redux-form'
 
-const LoginForm = props => {
+let LoginForm = props => {
+
+  const { handleSubmit } = props
 
   return (
-    <form class="new_user" id="new_user">
+    <form class="new_user" id="new_user" onSubmit={handleSubmit}>
       <div class="form-group">
-        <label for="user_email">Email</label>
-        <input class="form-control" id="user_email" name="user-n" type="email" />
+        <label htmlFor="email">E-mail</label>
+        <Field name="email" component="input" type="email" className="form-control"/>
       </div>
       <div class="form-group">
-        <label for="user_password">Password</label>
-        <input class="form-control" id="user_password" name="user-p" type="password" />
+          <label htmlFor="password">Password</label>
+          <Field name="password" component="input" type="password" className="form-control"/>
       </div>
-      <div class="checkbox">
-        <label for="user_remember_me">
-          <input name="user-r" type="hidden" value="0" />
-          <input id="user_remember_me" name="user" type="checkbox" value="1" />  Remember me
-        </label>
-      </div>
-      <button className="btn btn-primary">click</button>
+      <button className="btn btn-primary">Login</button>
     </form>
   )
 
 }
+
+LoginForm = reduxForm({
+  form: 'loginForm'
+})(LoginForm);
 
 export default LoginForm
