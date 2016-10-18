@@ -23,9 +23,6 @@ module.exports = {
       }
     ]
   },
-  sassLoader: {
-    includePaths: [path.resolve(__dirname, "src/assets/scss/")]
-  },
   output: {
     path: __dirname + "/src/",
     filename: "client.min.js"
