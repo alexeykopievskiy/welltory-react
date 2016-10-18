@@ -11,7 +11,7 @@ export default class Layout extends React.Component{
 
   render() {
 
-    return(
+    return (
       <div className="layout layout--main">
         <LoginPage />
       </div>
