@@ -3,7 +3,6 @@ import axios from 'axios'
 
 export function getToken(values) {
 
-
   return function(dispatch) {
     dispatch({type: 'GET_TOKEN'})
     axios({
@@ -21,4 +20,5 @@ export function getToken(values) {
       dispatch({type: 'GET_TOKEN_REJECTED', payload: error})
     })
   }
+  
 }
