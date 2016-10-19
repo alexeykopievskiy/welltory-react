@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import store from './store'
 import Layout from './containers/Layout'
 
+
 const app = document.getElementById('app')
 
 ReactDOM.render(
