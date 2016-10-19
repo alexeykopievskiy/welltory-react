@@ -5,9 +5,6 @@ import promise from 'redux-promise-middleware'
 
 import reducer from './reducers'
 
-export default createStore(reducer, middleware)
-
-
 const enhancer = compose(
   applyMiddleware(logger(), promise(), thunk),
 );
