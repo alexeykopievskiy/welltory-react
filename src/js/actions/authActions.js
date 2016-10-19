@@ -15,10 +15,11 @@ export function getToken(values) {
     })
     .then(response => {
       dispatch({type: 'GET_TOKEN_FULFILLED', payload: response.data})
+      window.localStorage.auth = 'JWT ' + response.data.token
     })
     .catch(error => {
       dispatch({type: 'GET_TOKEN_REJECTED', payload: error})
     })
   }
-  
+
 }
